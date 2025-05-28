@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catálogo de Gatinhos</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>🐾 Catálogo de Gatinhos 🐾</h1>
+  <div class="galeria">
+    <% imagens.forEach(img => { %>
+      <div class="gatinho">
+        <a href="/detalhes/<%= img.id %>">
+          <img src="<%= img.url %>" alt="Gatinho fofo">
+        </a>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>

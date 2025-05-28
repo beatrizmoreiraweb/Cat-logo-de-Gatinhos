@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Gatinho</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Detalhes do Gatinho 🐱</h1>
+  <img src="<%= gato.url %>" alt="Gatinho" style="max-width: 500px;">
+  <p><strong>ID da imagem:</strong> <%= gato.id %></p>
+  <% if (gato.breeds && gato.breeds.length > 0) { %>
+    <h2><%= gato.breeds[0].name %></h2>
+    <p><strong>Origem:</strong> <%= gato.breeds[0].origin %></p>
+    <p><strong>Temperamento:</strong> <%= gato.breeds[0].temperament %></p>
+    <p><strong>Descrição:</strong> <%= gato.breeds[0].description %></p>
+  <% } else { %>
+    <p>Sem informações de raça disponíveis.</p>
+  <% } %>
+  <br>
+  <a href="/">🔙 Voltar</a>
+</body>
+</html>
